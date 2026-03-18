@@ -749,7 +749,14 @@
       ⚡ Oferta exclusiva solo para clientes de <em>Del Brazo a la Cuna en 7 Días</em>
     </div>
     <!-- HOTMART - Sales Funnel Widget -->
+    <!--- sales funnel container --->
     <div id="hotmart-sales-funnel"></div>
+
+    <!--- script load and setup --->
+    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+    <script>
+    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+    </script>
     <!-- HOTMART - Sales Funnel Widget -->
   </div>
 
@@ -775,17 +782,16 @@
     Tus noches completas empiezan hoy. 🌙
   </h2>
   <!-- HOTMART - Sales Funnel Widget -->
+  <!--- sales funnel container --->
   <div id="hotmart-sales-funnel-2"></div>
+
+  <!--- script load and setup --->
+  <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+  <script>
+  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-2')
+  </script>
   <!-- HOTMART - Sales Funnel Widget -->
 </section>
-
-<!-- HOTMART - Sales Funnel Scripts -->
-<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-<script>
-  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-2');
-</script>
-<!-- HOTMART - Sales Funnel Scripts -->
 
 <script>
   // Countdown timer
