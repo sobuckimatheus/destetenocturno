@@ -3,799 +3,380 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Destete Nocturno Sin Llanto</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Destete Nocturno Sin Llanto - Última Oferta</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --red: #C0392B;
-    --red-light: #E74C3C;
-    --dark: #1a1a2e;
-    --cream: #FDF8F3;
-    --warm: #F5EDE0;
-    --gold: #D4A853;
-    --mint: #E8F5F0;
-    --text: #2C2C2C;
-    --muted: #7A7A7A;
-    --green: #27AE60;
-    --green-dark: #1E8449;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #2C2C2C;
+    line-height: 1.6;
   }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    padding: 60px 20px 50px;
+  /* URGENCY BAR */
+  .urgency-bar {
+    background: #E74C3C;
+    padding: 16px 20px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(ellipse at center, rgba(212,168,83,0.08) 0%, transparent 60%);
-    animation: pulse 4s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 1; }
-  }
-
-  .hero-badge {
-    display: inline-block;
-    background: var(--gold);
+  .urgency-bar p {
     color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 8px 20px;
-    border-radius: 50px;
-    margin-bottom: 24px;
-    animation: fadeDown 0.8s ease forwards;
+    font-weight: 700;
+    font-size: clamp(13px, 2.5vw, 16px);
+    letter-spacing: 0.5px;
   }
 
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 52px);
-    color: #fff;
+  .urgency-bar span {
+    font-weight: 900;
+    font-size: clamp(15px, 3vw, 18px);
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* HEADLINE SECTION */
+  .headline {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .headline h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 900;
+    color: #1a1a1a;
     line-height: 1.2;
     margin-bottom: 20px;
-    animation: fadeDown 0.8s ease 0.2s both;
   }
 
-  .hero h1 span {
-    color: var(--gold);
-    display: block;
-  }
-
-  .hero-sub {
-    font-size: clamp(16px, 2.5vw, 20px);
-    color: rgba(255,255,255,0.8);
-    max-width: 600px;
-    margin: 0 auto 30px;
-    line-height: 1.6;
-    animation: fadeDown 0.8s ease 0.4s both;
-  }
-
-  .hero-moon {
-    font-size: 60px;
-    animation: fadeDown 0.8s ease 0.1s both, float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* CONGRATULATIONS */
-  .congrats {
-    background: var(--red);
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .congrats h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 4vw, 42px);
-    color: #fff;
+  .headline .sub-red {
+    font-size: clamp(18px, 4vw, 28px);
+    font-weight: 700;
+    color: #E74C3C;
     line-height: 1.3;
-    max-width: 800px;
-    margin: 0 auto 16px;
+    margin-bottom: 12px;
   }
 
-  .congrats p {
-    color: rgba(255,255,255,0.9);
-    font-size: clamp(15px, 2vw, 18px);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.7;
+  .headline .small-gray {
+    font-size: 14px;
+    color: #888;
+    font-weight: 500;
   }
 
-  /* TRANSITION */
-  .transition-block {
-    background: var(--warm);
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: 0 auto;
+  /* PRODUCT NAME */
+  .product-name {
     text-align: center;
+    margin-bottom: 50px;
   }
 
-  .transition-block .but {
-    font-size: clamp(20px, 3vw, 30px);
-    font-family: 'Playfair Display', serif;
-    color: var(--dark);
-    margin-bottom: 30px;
-  }
-
-  .pain-box {
-    background: #fff;
-    border-left: 4px solid var(--red);
-    border-radius: 12px;
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 700px;
-    text-align: left;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  }
-
-  .pain-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(20px, 2.5vw, 26px);
-    color: var(--red);
+  .product-name h2 {
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 800;
+    color: #1a1a1a;
     margin-bottom: 16px;
-  }
-
-  .pain-box p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--text);
-  }
-
-  .pain-box p strong {
-    color: var(--red);
-  }
-
-  /* OFFER SECTION */
-  .offer {
-    background: var(--dark);
-    padding: 70px 20px;
-    text-align: center;
-  }
-
-  .offer-label {
-    display: inline-block;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 8px 24px;
-    border-radius: 50px;
-    margin-bottom: 24px;
-  }
-
-  .offer h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 54px);
-    color: #fff;
     line-height: 1.2;
-    margin-bottom: 16px;
   }
 
-  .offer h2 em {
-    color: var(--gold);
-    font-style: normal;
-  }
-
-  .offer-desc {
-    color: rgba(255,255,255,0.75);
-    font-size: clamp(15px, 2vw, 18px);
+  .product-name p {
+    font-size: clamp(15px, 3vw, 18px);
+    color: #555;
+    line-height: 1.6;
     max-width: 600px;
-    margin: 0 auto 50px;
-    line-height: 1.7;
-  }
-
-  /* BULLETS */
-  .bullets {
-    background: var(--cream);
-    padding: 70px 20px;
-  }
-
-  .bullets-inner {
-    max-width: 750px;
     margin: 0 auto;
-  }
-
-  .bullets h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 3.5vw, 36px);
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--dark);
-  }
-
-  .bullet-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .bullet-item:hover {
-    transform: translateX(6px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-
-  .bullet-icon {
-    width: 36px;
-    height: 36px;
-    background: var(--mint);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .bullet-item p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--text);
-  }
-
-  /* FOR WHO */
-  .for-who {
-    background: linear-gradient(135deg, #0f3460, #1a1a2e);
-    padding: 70px 20px;
-    text-align: center;
-  }
-
-  .for-who h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 3.5vw, 36px);
-    color: #fff;
-    margin-bottom: 40px;
-  }
-
-  .who-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .who-card {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 14px;
-    padding: 20px;
-    text-align: left;
-    backdrop-filter: blur(10px);
-  }
-
-  .who-card .arrow {
-    color: var(--gold);
-    font-size: 18px;
-    margin-right: 8px;
-  }
-
-  .who-card p {
-    color: rgba(255,255,255,0.85);
-    font-size: 15px;
-    line-height: 1.6;
   }
 
   /* WHAT YOU GET */
-  .get {
-    background: var(--cream);
-    padding: 70px 20px;
-    text-align: center;
-  }
-
-  .get h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 3.5vw, 36px);
+  .what-you-get {
     margin-bottom: 40px;
-    color: var(--dark);
   }
 
-  .get-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+  .what-you-get h3 {
+    font-size: clamp(20px, 4vw, 28px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a1a1a;
   }
 
-  .get-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 28px 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    transition: transform 0.2s;
+  .item {
+    background: #f9f9f9;
+    border-left: 4px solid #27AE60;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
   }
 
-  .get-card:hover { transform: translateY(-4px); }
+  .item .emoji {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
 
-  .get-card .icon {
-    font-size: 36px;
+  .item p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  /* BONUS */
+  .bonus {
+    background: linear-gradient(135deg, #F39C12, #F1C40F);
+    border-radius: 12px;
+    padding: 30px 24px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(243,156,18,0.3);
+  }
+
+  .bonus h4 {
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 800;
+    color: #fff;
     margin-bottom: 14px;
   }
 
-  .get-card h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 17px;
-    color: var(--dark);
-    margin-bottom: 10px;
-  }
-
-  .get-card p {
-    font-size: 14px;
-    color: var(--muted);
+  .bonus p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.95);
     line-height: 1.6;
   }
 
   /* PRICING */
   .pricing {
-    background: var(--dark);
-    padding: 70px 20px;
     text-align: center;
-  }
-
-  .pricing h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(22px, 3vw, 32px);
-    color: #fff;
-    margin-bottom: 40px;
-  }
-
-  .price-box {
-    background: #fff;
-    border-radius: 24px;
-    padding: 50px 40px;
-    max-width: 500px;
-    margin: 0 auto 30px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .price-box::before {
-    content: '⭐ OFERTA EXCLUSIVA';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--gold);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .price-box .old-price {
-    font-size: 20px;
-    color: var(--muted);
-    text-decoration: line-through;
-    margin-top: 20px;
-    display: block;
-  }
-
-  .price-box .new-price {
-    font-family: 'Playfair Display', serif;
-    font-size: 72px;
-    font-weight: 900;
-    color: var(--green);
-    line-height: 1;
-  }
-
-  .price-box .currency {
-    font-size: 28px;
-    vertical-align: super;
-    color: var(--green);
-    font-family: 'Playfair Display', serif;
-  }
-
-  .price-box .usd {
-    font-size: 16px;
-    color: var(--muted);
     margin-bottom: 30px;
+  }
+
+  .pricing .old-price {
+    font-size: 22px;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .pricing .new-price {
+    font-size: clamp(56px, 12vw, 80px);
+    font-weight: 900;
+    color: #27AE60;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .pricing .usd-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 16px;
     display: block;
   }
 
-  .price-box .exclusive-note {
-    font-size: 13px;
-    color: var(--muted);
-    background: var(--warm);
+  .pricing .exclusive-box {
+    background: #FFF8DC;
+    border: 2px dashed #F39C12;
     border-radius: 8px;
-    padding: 10px 16px;
-    margin-bottom: 24px;
+    padding: 12px 20px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  .pricing .exclusive-box p {
+    font-size: 13px;
+    color: #333;
+    font-weight: 600;
   }
 
   /* CTA BUTTON */
   .cta-btn {
     display: block;
-    background: linear-gradient(135deg, var(--green), var(--green-dark));
+    background: linear-gradient(135deg, #27AE60, #1E8449);
     color: #fff;
-    font-size: clamp(16px, 2vw, 20px);
-    font-weight: 700;
+    font-size: clamp(18px, 3.5vw, 22px);
+    font-weight: 800;
     text-decoration: none;
+    text-align: center;
     padding: 22px 40px;
-    border-radius: 60px;
-    max-width: 600px;
+    border-radius: 50px;
     margin: 0 auto 16px;
+    max-width: 600px;
     cursor: pointer;
     border: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 8px 30px rgba(39,174,96,0.4);
     text-transform: uppercase;
     letter-spacing: 1px;
-    animation: glow 2s ease-in-out infinite;
+    box-shadow: 0 8px 30px rgba(39,174,96,0.4);
+    transition: all 0.3s ease;
+    animation: pulse-glow 2s ease-in-out infinite;
   }
 
-  @keyframes glow {
-    0%, 100% { box-shadow: 0 8px 30px rgba(39,174,96,0.4); }
-    50% { box-shadow: 0 8px 50px rgba(39,174,96,0.7); }
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 8px 30px rgba(39,174,96,0.4);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 12px 50px rgba(39,174,96,0.7);
+      transform: scale(1.02);
+    }
   }
 
   .cta-btn:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(39,174,96,0.5);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 15px 50px rgba(39,174,96,0.6);
   }
 
   .no-thanks {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
   .no-thanks a {
-    color: rgba(255,255,255,0.4);
     font-size: 13px;
+    color: #999;
     text-decoration: underline;
     cursor: pointer;
   }
 
   /* GUARANTEE */
   .guarantee {
-    background: var(--mint);
-    padding: 50px 20px;
+    background: #E8F5F0;
+    border-radius: 12px;
+    padding: 24px;
     text-align: center;
-  }
-
-  .guarantee-box {
     max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    background: #fff;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
 
-  .guarantee-shield {
-    font-size: 56px;
-    flex-shrink: 0;
-  }
-
-  .guarantee-text h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: var(--green);
-    margin-bottom: 8px;
-  }
-
-  .guarantee-text p {
+  .guarantee p {
     font-size: 15px;
-    color: var(--muted);
+    color: #333;
     line-height: 1.6;
   }
 
-  /* TIMER */
-  .timer-bar {
-    background: var(--red);
-    padding: 14px 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  .guarantee p strong {
+    font-weight: 700;
+    color: #27AE60;
   }
 
-  .timer-bar p {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
-
-  .timer-bar span {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 900;
+  /* HOTMART WIDGET */
+  #hotmart-sales-funnel {
+    max-width: 600px;
+    margin: 0 auto 20px;
   }
 
   /* RESPONSIVE */
   @media (max-width: 600px) {
-    .guarantee-box {
-      flex-direction: column;
-      text-align: center;
+    .container {
+      padding: 30px 16px;
     }
-    .price-box {
-      padding: 50px 24px 30px;
+    .item {
+      padding: 16px;
     }
-  }
-
-  .section-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .divider {
-    width: 60px;
-    height: 3px;
-    background: var(--gold);
-    margin: 0 auto 30px;
-    border-radius: 2px;
-  }
-
-  /* HOTMART WIDGET STYLES */
-  #hotmart-sales-funnel,
-  #hotmart-sales-funnel-2 {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
   }
 </style>
 </head>
 <body>
 
-<!-- TIMER BAR -->
-<div class="timer-bar">
-  <p>⚠️ Esta oferta desaparece cuando cierres esta página — Tiempo restante: <span id="timer">09:59</span></p>
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  <p>⚠️ ÚLTIMA OPORTUNIDAD — Esta oferta desaparece cuando cierres esta página. <span id="timer">10:00</span></p>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-moon">🌙</div>
-  <div class="hero-badge">Solo para clientes de Del Brazo a la Cuna</div>
-  <h1>
-    ¡Felicidades, mamá!
-    <span>Tu bebé está a 7 días de dormir solo. 🎉</span>
-  </h1>
-  <p class="hero-sub">
-    Tomaste la mejor decisión. Estoy segura de que tus noches van a mejorar para siempre. 
-    Pero antes de que empieces... tengo algo importante que decirte.
-  </p>
-</section>
+<div class="container">
 
-<!-- CONGRATULATIONS -->
-<section class="congrats">
-  <h2>Espera — hay un problema que la mayoría de las mamás no ve venir</h2>
-  <p>Logras que tu bebé duerma en la cuna... pero sigues sin dormir tú. ¿Por qué?</p>
-</section>
+  <!-- HEADLINE -->
+  <section class="headline">
+    <h1>Espera — Tengo una última oferta para ti</h1>
+    <p class="sub-red">Solo por este momento: accede al Destete Nocturno Sin Llanto por apenas $9</p>
+    <p class="small-gray">Esta es la única vez que verás este precio.</p>
+  </section>
 
-<!-- PAIN BLOCK -->
-<section style="background: var(--warm); padding: 60px 20px;">
-  <div class="section-wrapper">
-    <div class="pain-box">
-      <h3>Las mamadas nocturnas.</h3>
-      <p>
-        Tu bebé ya no necesita el pecho para <em>dormirse</em>.<br><br>
-        Pero todavía se despierta <strong>2, 3, 4 veces por la noche</strong> pidiendo mamar.<br><br>
-        Y tú, agotada, le das el pecho porque es la forma más rápida de volver a dormir.<br><br>
-        Cada noche. La misma historia.<br><br>
-        <strong>¿Te suena familiar?</strong>
-      </p>
+  <!-- PRODUCT NAME -->
+  <section class="product-name">
+    <h2>Destete Nocturno Sin Llanto</h2>
+    <p>El método para eliminar las mamadas nocturnas en 7 días. Sin llanto. Sin culpa. Sin traumas.</p>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="what-you-get">
+    <h3>Al adquirir hoy, recibes:</h3>
+
+    <div class="item">
+      <div class="emoji">📖</div>
+      <p><strong>Ebook completo de 20 páginas</strong> — protocolo paso a paso para las 7 noches</p>
     </div>
 
-    <p style="text-align:center; font-size:18px; color: var(--dark); max-width:650px; margin: 0 auto; line-height:1.8;">
-      Esto no significa que hiciste algo mal. Significa que tu bebé aprendió a 
-      <strong>asociar el pecho con volver a dormirse</strong> — no con el hambre.
-      <br><br>
-      Y hay un método específico para eliminar eso. Suave. Gradual. Sin llanto.
-    </p>
-  </div>
-</section>
-
-<!-- OFFER -->
-<section class="offer">
-  <div class="offer-label">Nueva oferta exclusiva</div>
-  <h2>
-    Conoce:<br>
-    <em>"Destete Nocturno Sin Llanto"</em>
-  </h2>
-  <p class="offer-desc">
-    El método paso a paso para eliminar las mamadas nocturnas de forma gradual, 
-    respetuosa y sin dejar que tu bebé llore solo.
-    <br><br>
-    <strong style="color:#fff;">Sin culpa. Sin trauma. Sin noches eternas.</strong>
-  </p>
-  <div class="divider"></div>
-</section>
-
-<!-- BULLETS -->
-<section class="bullets">
-  <div class="bullets-inner">
-    <h2>Lo que vas a aprender 👇</h2>
-
-    <div class="bullet-item">
-      <div class="bullet-icon">✅</div>
-      <p><strong>Por qué tu bebé sigue pidiendo pecho de madrugada</strong> aunque ya no tiene hambre — y cómo romper ese ciclo esta semana.</p>
+    <div class="item">
+      <div class="emoji">📅</div>
+      <p><strong>Plan de las 7 Noches</strong> — qué hacer exactamente cada noche</p>
     </div>
 
-    <div class="bullet-item">
-      <div class="bullet-icon">✅</div>
-      <p><strong>El protocolo exacto para reducir y eliminar las tomas nocturnas en 7 días</strong>, con pasos claros para cada noche.</p>
+    <div class="item">
+      <div class="emoji">🎥</div>
+      <p><strong>Video explicativo de la Dra. Camila</strong> — los puntos más importantes del método</p>
     </div>
 
-    <div class="bullet-item">
-      <div class="bullet-icon">✅</div>
-      <p><strong>Cómo hacerlo sin afectar tu producción de leche durante el día</strong> — destete nocturno no significa destetar.</p>
+    <div class="item">
+      <div class="emoji">❓</div>
+      <p><strong>FAQ completo</strong> — respuestas a las dudas más frecuentes</p>
     </div>
+  </section>
 
-    <div class="bullet-item">
-      <div class="bullet-icon">✅</div>
-      <p><strong>Qué hacer exactamente cuando llora de madrugada</strong> sin darle el pecho — con respuestas alternativas que funcionan.</p>
-    </div>
+  <!-- BONUS -->
+  <section class="bonus">
+    <h4>🎁 Bono Secreto</h4>
+    <p>Un bono exclusivo que encontrarás dentro del área de miembros y que cambia completamente la forma en que manejas los despertares de madrugada.</p>
+  </section>
 
-    <div class="bullet-item">
-      <div class="bullet-icon">✅</div>
-      <p><strong>Cómo preparar a tu bebé emocionalmente</strong> para este cambio sin generarle angustia ni inseguridad.</p>
+  <!-- PRICING -->
+  <section class="pricing">
+    <span class="old-price">$47 USD</span>
+    <div class="new-price">$9 USD</div>
+    <span class="usd-text">Pago único. Sin mensualidades.</span>
+    <div class="exclusive-box">
+      <p>⚡ Precio especial — solo en esta página</p>
     </div>
+  </section>
 
-    <div class="bullet-item">
-      <div class="bullet-icon">✅</div>
-      <p><strong>El papel del papá en este proceso</strong> — y cómo alinearse para que funcione desde la primera noche.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOR WHO -->
-<section class="for-who">
-  <h2 style="color:#fff;">Este método es para ti si...</h2>
-  <div class="who-grid">
-    <div class="who-card">
-      <p><span class="arrow">→</span>Tu bebé tiene <strong style="color:#fff;">más de 4 meses</strong></p>
-    </div>
-    <div class="who-card">
-      <p><span class="arrow">→</span>Se despierta de madrugada para mamar <strong style="color:#fff;">2 o más veces por noche</strong></p>
-    </div>
-    <div class="who-card">
-      <p><span class="arrow">→</span>Quieres destetar de noche <strong style="color:#fff;">sin destetar de día</strong></p>
-    </div>
-    <div class="who-card">
-      <p><span class="arrow">→</span>No quieres usar <strong style="color:#fff;">técnicas de llanto</strong></p>
-    </div>
-    <div class="who-card">
-      <p><span class="arrow">→</span>Estás agotada y necesitas <strong style="color:#fff;">dormir de una vez</strong></p>
-    </div>
-    <div class="who-card">
-      <p><span class="arrow">→</span>Quieres hacerlo de forma <strong style="color:#fff;">respetuosa y sin culpa</strong></p>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT YOU GET -->
-<section class="get">
-  <div class="section-wrapper">
-    <h2>Al adquirir hoy, recibes:</h2>
-    <div class="get-grid">
-      <div class="get-card">
-        <div class="icon">📖</div>
-        <h4>Guía Completa PDF</h4>
-        <p>Protocolo paso a paso para eliminar las tomas nocturnas de forma gradual y respetuosa.</p>
-      </div>
-      <div class="get-card">
-        <div class="icon">📅</div>
-        <h4>Plan de 7 Noches</h4>
-        <p>Exactamente qué hacer cada noche, con variaciones según la reacción de tu bebé.</p>
-      </div>
-      <div class="get-card">
-        <div class="icon">🎥</div>
-        <h4>Video de la Dra. Camila</h4>
-        <p>Explicación detallada de los puntos más importantes del método.</p>
-      </div>
-      <div class="get-card">
-        <div class="icon">❓</div>
-        <h4>FAQ Completo</h4>
-        <p>Respuestas a las dudas más frecuentes que surgen durante el proceso.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing">
-  <h2>Accede ahora por un precio especial</h2>
-  <div class="price-box">
-    <span class="old-price">Valor normal: $47 USD</span>
-    <div class="new-price"><span class="currency">$</span>9</div>
-    <span class="usd">USD — pago único</span>
-    <div class="exclusive-note">
-      ⚡ Oferta exclusiva solo para clientes de <em>Del Brazo a la Cuna en 7 Días</em>
-    </div>
-    <!-- HOTMART - Sales Funnel Widget -->
-    <!--- sales funnel container --->
-    <div id="hotmart-sales-funnel"></div>
-
-    <!--- script load and setup --->
-    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-    <script>
-    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
-    </script>
-    <!-- HOTMART - Sales Funnel Widget -->
-  </div>
-
-  <div class="no-thanks">
-    <a href="#">No gracias, prefiero seguir despertándome cada hora para amamantar.</a>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<section class="guarantee">
-  <div class="guarantee-box">
-    <div class="guarantee-shield">🛡️</div>
-    <div class="guarantee-text">
-      <h3>Garantía de 7 Días</h3>
-      <p>Si aplicas el método y no ves ningún resultado en 7 días, te devolvemos tu dinero completamente. Sin preguntas, sin complicaciones.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section style="background: var(--green); padding: 50px 20px; text-align:center;">
-  <h2 style="font-family:'Playfair Display',serif; color:#fff; font-size:clamp(22px,3vw,34px); margin-bottom:24px;">
-    Tus noches completas empiezan hoy. 🌙
-  </h2>
+  <!-- CTA BUTTON -->
   <!-- HOTMART - Sales Funnel Widget -->
-  <!--- sales funnel container --->
-  <div id="hotmart-sales-funnel-2"></div>
+  <div id="hotmart-sales-funnel"></div>
 
-  <!--- script load and setup --->
   <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
   <script>
-  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-2')
+  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
   </script>
   <!-- HOTMART - Sales Funnel Widget -->
-</section>
+
+  <div class="no-thanks">
+    <a href="#">No gracias, prefiero seguir despertándome cada noche.</a>
+  </div>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee">
+    <p><strong>🛡️ Garantía de 7 días</strong> — Si no ves resultados, te devolvemos tu dinero. Sin preguntas.</p>
+  </section>
+
+</div>
 
 <script>
-  // Countdown timer
-  let seconds = 9 * 60 + 59;
+  // Countdown timer - 10 minutes
+  let seconds = 10 * 60;
   const timerEl = document.getElementById('timer');
 
   setInterval(() => {
@@ -808,20 +389,7 @@
     const s = (seconds % 60).toString().padStart(2, '0');
     timerEl.textContent = `${m}:${s}`;
   }, 1000);
-
-  // Scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = 'fadeUp 0.6s ease forwards';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.bullet-item, .get-card, .who-card').forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
-  });
 </script>
+
 </body>
 </html>
